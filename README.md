@@ -1,4 +1,4 @@
-# the-band-clone
+# the-band-clone-uyen0205
 
 ### Design
 
@@ -6,6 +6,7 @@
 
 1. Component
    Normal:
+
    - Logo
    - Header
    - Breadcrumb
@@ -17,5 +18,9 @@
    - Search
    - Footer
    - Social
+
 2. Project
-# the-band-clone-uyen0205
+
+### Code
+
+### Fix Bug
