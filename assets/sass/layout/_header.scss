@@ -1,0 +1,70 @@
+.header {
+  $header-h: var(--header-h);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  @include flex(space-between);
+  height: $header-h;
+  background-color: #000;
+  font-size: 1.5rem;
+
+  .menu-list {
+    @include flex(start);
+    .member-item {
+      position: relative;
+    }
+
+    .menu-item > a {
+      display: block;
+      padding: 0 2.4rem;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: $header-h;
+    }
+
+    .menu-item:hover > a {
+      background-color: #ccc;
+      color: #000;
+    }
+
+    .menu-item:hover > .submenu-list {
+      display: block;
+    }
+  }
+
+  .submenu-list {
+    width: 16rem;
+    position: absolute;
+    top: $header-h;
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+    display: none;
+
+    .submenu-item a {
+      display: block;
+      padding: 8px 16px;
+      line-height: 22.5px;
+      color: #000;
+    }
+
+    .submenu-item:hover a {
+      background-color: #ccc;
+    }
+  }
+
+  .search-btn {
+    padding: 0 2.4rem;
+    height: $header-h;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f44336;
+    }
+  }
+}

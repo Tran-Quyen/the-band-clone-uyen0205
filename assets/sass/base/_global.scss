@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  // 62.5% <=> 10px
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+}
+
+// Common
+.wrapper {
+  width: 80rem;
+  margin: 0 auto;
+  padding: 7.4rem 1.6rem 9.6rem;
+  background-color: white;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 4.5rem;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 22.5px;
+  font-style: italic;
+  margin: 1.5rem 0;
+  opacity: 0.6;
+}
