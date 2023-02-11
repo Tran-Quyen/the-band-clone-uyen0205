@@ -1,8 +1,10 @@
 #home {
+  // Content
   .content {
     margin-top: var(--header-h);
   }
 
+  // Slider
   .slider {
     .carousel-caption {
       color: #fff;
@@ -23,12 +25,131 @@
     }
   }
 
+  // Band
   .band {
     .description {
       font-size: 1.5rem;
       line-height: 22.5px;
       text-align: justify;
-      margin-bottom: 4.7rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .member {
+      &-list {
+        text-align: center;
+        display: flex;
+      }
+
+      &-item {
+      }
+
+      &-innner {
+        padding: 3.2rem 0 1.6rem;
+      }
+
+      &-name {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+      }
+
+      &-avatar {
+        width: 60%;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  // Tour
+  .tour {
+    background-color: #000000;
+
+    .main-title,
+    .slogan {
+      color: #fff;
+      margin: 15px 0;
+    }
+
+    // ticket-list
+    .ticket-list {
+      background-color: #fff;
+      color: #757575;
+      font-size: 1.5rem;
+      margin-bottom: 3.2rem;
+    }
+
+    .ticket-item {
+      padding: 8px 16px;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+    }
+
+    .sold-out {
+      background-color: #f44336;
+      color: #fff;
+      margin-left: 16px;
+      line-height: 22.5px;
+      padding: 4px 8px;
+      text-align: center;
+    }
+
+    .ticket-count {
+      $size: 2.5rem;
+      position: absolute;
+      right: 3.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      display: block;
+      width: $size;
+      height: $size;
+      color: #fff;
+      background-color: #000;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 2.5rem;
+    }
+
+    // tour-list
+    &-list {
+      display: flex;
+      gap: 1.6rem;
+      font-size: 1.5rem;
+    }
+
+    &-item {
+      flex: 1;
+    }
+
+    &-inner {
+      background-color: #000;
+    }
+
+    &-image > img {
+      width: 100%;
+    }
+
+    &-image:hover > img {
+      opacity: 0.7;
+    }
+
+    &-body {
+      padding: 16px;
+      background-color: #fff;
+    }
+
+    &-title {
+      font-size: inherit;
+      font-weight: 700;
+    }
+
+    &-date {
+      opacity: 0.6;
+      margin: 15px 0px;
+    }
+
+    &-description {
+      text-align: justify;
+      margin-bottom: 1.5rem;
     }
   }
 }
