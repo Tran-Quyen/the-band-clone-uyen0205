@@ -29,6 +29,15 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- JQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -59,6 +68,7 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/main.min.css" />
+    <script src="./assets/js/main.js" defer></script>
   </head>
 
   <body>
@@ -67,20 +77,20 @@
         <!-- Start: Header -->
         <div class="header">
           <ul class="menu-list">
-            <li class="menu-item"><a href="!#">Home</a></li>
-            <li class="menu-item"><a href="!#">Band</a></li>
-            <li class="menu-item"><a href="!#">Tour</a></li>
-            <li class="menu-item"><a href="!#">Contact</a></li>
+            <li class="menu-item"><a href="#pheader">Home</a></li>
+            <li class="menu-item"><a href="#band">Band</a></li>
+            <li class="menu-item"><a href="#tour">Tour</a></li>
+            <li class="menu-item"><a href="#contact">Contact</a></li>
             <li class="menu-item">
-              <a href="!#">
+              <a href="#">
                 <span>More</span>
                 <i class="fa-solid fa-caret-down"></i>
               </a>
 
               <ul class="submenu-list">
-                <li class="submenu-item"><a href="!#">Merchandise</a></li>
-                <li class="submenu-item"><a href="!#">Extras</a></li>
-                <li class="submenu-item"><a href="!#">Media</a></li>
+                <li class="submenu-item"><a href="#">Merchandise</a></li>
+                <li class="submenu-item"><a href="#">Extras</a></li>
+                <li class="submenu-item"><a href="#">Media</a></li>
               </ul>
             </li>
           </ul>
@@ -90,6 +100,8 @@
           </button>
         </div>
         <!-- End: Header -->
+
+        <div id="pheader"></div>
 
         <!-- Start: Content -->
         <div class="content">
@@ -140,7 +152,7 @@
           <!-- End: Slider -->
 
           <!-- Start: Band -->
-          <div class="band">
+          <div class="band" id="band">
             <div class="wrapper">
               <h2 class="main-title">The band</h2>
               <p class="slogan">We love music</p>
@@ -196,7 +208,7 @@
           <!-- End: Band -->
 
           <!-- Start: Tour -->
-          <div class="tour">
+          <div class="tour" id="tour">
             <div class="wrapper">
               <h2 class="main-title">Tour dates</h2>
               <p class="slogan">Remember to book your tickets!</p>
@@ -276,7 +288,7 @@
           <!-- End: Tour -->
 
           <!-- Start: Contact -->
-          <div class="contact">
+          <div class="contact" id="contact">
             <div class="wrapper">
               <h2 class="main-title">Contact</h2>
               <p class="slogan">Fan? Drop a note!</p>
@@ -285,16 +297,14 @@
                 <div class="contact-info">
                   <ul class="contact-info-list">
                     <li class="contact-info-item">
-                      <i class="fa-solid fa-location-dot"></i>
-                      Chicago, US
+                      <i class="fa-solid fa-location-dot"></i>Chicago, US
                     </li>
                     <li class="contact-info-item">
-                      <i class="fa-solid fa-phone"></i>
-                      Phone: <a href="tel:+00 151515">+00 151515</a>
+                      <i class="fa-solid fa-phone"></i>Phone:
+                      <a href="tel:+00 151515">+00 151515</a>
                     </li>
                     <li class="contact-info-item">
-                      <i class="fa-solid fa-envelope"></i>
-                      Email:
+                      <i class="fa-solid fa-envelope"></i>Email:
                       <a
                         href="mailto:mail@mail.com"
                         target="_blank"
@@ -307,12 +317,14 @@
 
                 <form action="" class="contact-form">
                   <div class="form-field">
-                    <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="Email" />
+                    <input type="text" placeholder="Name" required />
+                    <input type="text" placeholder="Email" required />
                   </div>
+
                   <div class="form-field">
-                    <input type="text" class="w-full" placeholder="Message" />
+                    <input type="text" placeholder="Message" required />
                   </div>
+
                   <div class="form-field">
                     <button class="cta">Send</button>
                   </div>
@@ -332,15 +344,35 @@
 
           <div class="footer-body">
             <div class="social">
-              <a href="!#"><i class="fa-brands fa-square-facebook"></i></a>
-              <a href="!#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="!#"><i class="fa-brands fa-tiktok"></i></a>
-              <a href="!#"><i class="fa-brands fa-pinterest"></i></a>
-              <a href="!#"><i class="fa-brands fa-twitter"></i></a>
-              <a href="!#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/QuyenGiaSuJS"
+                ><i class="fa-brands fa-square-facebook"></i
+              ></a>
+              <a href="https://www.facebook.com/QuyenGiaSuJS"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://www.facebook.com/QuyenGiaSuJS"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+              <a href="https://www.facebook.com/QuyenGiaSuJS"
+                ><i class="fa-brands fa-pinterest"></i
+              ></a>
+              <a href="https://www.facebook.com/QuyenGiaSuJS"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="https://www.facebook.com/QuyenGiaSuJS"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
             </div>
 
-            <p class="copyright">Powered by <a href="!#">w3.css</a></p>
+            <p class="copyright">
+              Powered by
+              <a
+                href="https://www.facebook.com/QuyenGiaSuJS"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Quyen Dang</a
+              >
+            </p>
           </div>
         </div>
         <!-- End: Footer -->

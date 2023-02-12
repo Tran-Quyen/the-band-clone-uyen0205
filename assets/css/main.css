@@ -149,8 +149,40 @@ body {
   background-color: #f44336;
 }
 
+#pheader {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .footer-map > img {
   width: 100%;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+.footer-body {
+  margin-top: 7rem;
+  text-align: center;
+}
+.footer .social a {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #666;
+}
+.footer .social a:hover {
+  opacity: 0.6;
+}
+.footer .social a:not(:last-child) {
+  margin-right: 5px;
+}
+.footer .copyright {
+  margin: 2.1rem 0 8rem;
+}
+.footer .copyright a {
+  text-transform: uppercase;
+}
+.footer .copyright a:hover {
+  text-decoration: underline;
 }
 
 .cta {
@@ -287,4 +319,52 @@ body {
 #home .tour-description {
   text-align: justify;
   margin-bottom: 1.5rem;
+}
+#home .contact-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3.2rem;
+}
+#home .contact-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#home .contact-info-item {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+#home .contact-info i {
+  width: 1.8rem;
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+#home .contact-form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#home .contact .form-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+#home .contact .form-field:last-child {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+#home .contact .form-field input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#home .contact .form-field input:focus {
+  outline: 1px solid #2cccff;
 }

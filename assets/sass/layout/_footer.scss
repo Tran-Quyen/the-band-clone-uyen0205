@@ -1,5 +1,37 @@
 .footer {
   &-map > img {
     width: 100%;
+    filter: grayscale(50%);
+  }
+
+  &-body {
+    margin-top: 7rem;
+    text-align: center;
+  }
+
+  .social a {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: #666;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .social a:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  .copyright {
+    margin: 2.1rem 0 8rem;
+    a {
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+        // filter: hue-rotate(360deg); | js
+      }
+    }
   }
 }
