@@ -14,4 +14,8 @@
     color: #000 !important;
     background-color: #ccc !important;
   }
+
+  @include mobile {
+    width: 100%;
+  }
 }

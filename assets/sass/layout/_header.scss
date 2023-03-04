@@ -6,15 +6,98 @@
   left: 0;
   right: 0;
   z-index: 1;
-
-  @include flex(space-between);
-  height: $header-h;
   background-color: #000;
+  height: $header-h;
   font-size: 1.5rem;
+
+  .nav-desktop {
+    @include flex(space-between);
+
+    @include mobile {
+      display: none;
+    }
+
+    .menu-item:hover > .submenu-list {
+      display: block;
+    }
+  }
+
+  .nav-mobile {
+    display: none;
+
+    a {
+      display: block;
+      padding: 0 2.4rem;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: $header-h;
+      font-size: 1.5rem;
+    }
+
+    .nav-mobile-inner {
+      @include flex(space-between);
+
+      h1 {
+        display: block;
+        height: $header-h;
+        margin-bottom: 0;
+
+        &:hover > a {
+          color: #000;
+          background-color: #ccc;
+        }
+      }
+
+      .menu-btn {
+        display: block;
+        height: $header-h;
+        padding: 0 2.4rem;
+        color: #fff;
+        background: transparent;
+
+        &:hover {
+          color: #000;
+          background-color: #ccc;
+        }
+      }
+    }
+
+    .menu-list {
+      display: none;
+      background: #000;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+
+      &.active {
+        display: flex;
+      }
+
+      .menu-item {
+        width: inherit;
+      }
+
+      .submenu-list {
+        width: inherit;
+
+        a {
+          padding-left: 3.4rem;
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
 
   .menu-list {
     @include flex(start);
-    .member-item {
+    .menu-item {
       position: relative;
     }
 
@@ -29,10 +112,6 @@
     .menu-item:hover > a {
       background-color: #ccc;
       color: #000;
-    }
-
-    .menu-item:hover > .submenu-list {
-      display: block;
     }
   }
 

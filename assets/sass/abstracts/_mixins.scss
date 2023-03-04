@@ -3,7 +3,12 @@
   height: $height;
 }
 
-@mixin flex($justify-content: center, $align-items: center, $wrap: wrap, $direction: row) {
+@mixin flex(
+  $justify-content: center,
+  $align-items: center,
+  $wrap: wrap,
+  $direction: row
+) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify-content;
@@ -16,4 +21,28 @@
   top: $y;
   left: $x;
   transform: translateX($translateX) translateY($translateY);
+}
+
+// Responsive
+/* Set các giá trị với màn hình tương ứng */
+$mobile-max-w: 46.1875em;
+$tablet-min-w: 46.25em;
+$tablet-max-w: 63.9375em;
+
+@mixin tablet_and_mobile {
+  @media (min-width: #{$tablet-max-w}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-min-w}) and (max-width: #{$tablet-max-w}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-max-w}) {
+    @content;
+  }
 }

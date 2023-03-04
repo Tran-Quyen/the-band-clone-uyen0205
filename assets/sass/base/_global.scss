@@ -11,10 +11,13 @@ body {
   font-size: 1.6rem;
   font-family: 'Lato', sans-serif;
   font-weight: normal;
+  overflow: auto !important;
+  padding-right: 0 !important;
 }
 
 // Common
 .wrapper {
+  max-width: 100%;
   width: 80rem;
   margin: 0 auto;
   padding: 7.4rem 1.6rem 9.6rem;

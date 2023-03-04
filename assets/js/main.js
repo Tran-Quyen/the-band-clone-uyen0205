@@ -1,3 +1,18 @@
+// Show onclick
+$('[data-toggle]').click(function () {
+  var key = this.dataset.toggle
+  var control = $(`[data-control=${key}]`)[0]
+  var allControl = [...$(control), ...$(control).find('[data-control]')]
+
+  if (!$(control).hasClass('active')) $(control).addClass('active')
+  else {
+    $(allControl).each(function () {
+      $(this).removeClass('active')
+    })
+  }
+})
+
+// Link color change
 function handleColorChange(jump) {
   var link = $('.copyright > a')
   var i = 0
@@ -13,7 +28,7 @@ function handleColorChange(jump) {
 
 handleColorChange(20)
 
-// Select all links with hashes
+// Scroll into hash
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')

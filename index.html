@@ -76,28 +76,58 @@
       <div id="home">
         <!-- Start: Header -->
         <div class="header">
-          <ul class="menu-list">
-            <li class="menu-item"><a href="#pheader">Home</a></li>
-            <li class="menu-item"><a href="#band">Band</a></li>
-            <li class="menu-item"><a href="#tour">Tour</a></li>
-            <li class="menu-item"><a href="#contact">Contact</a></li>
-            <li class="menu-item">
-              <a href="#">
-                <span>More</span>
-                <i class="fa-solid fa-caret-down"></i>
-              </a>
+          <div class="nav-desktop">
+            <ul class="menu-list">
+              <li class="menu-item"><a href="#pheader">Home</a></li>
+              <li class="menu-item"><a href="#band">Band</a></li>
+              <li class="menu-item"><a href="#tour">Tour</a></li>
+              <li class="menu-item"><a href="#contact">Contact</a></li>
+              <li class="menu-item">
+                <a>
+                  <span>More</span>
+                  <i class="fa-solid fa-caret-down"></i>
+                </a>
 
-              <ul class="submenu-list">
-                <li class="submenu-item"><a href="#">Merchandise</a></li>
-                <li class="submenu-item"><a href="#">Extras</a></li>
-                <li class="submenu-item"><a href="#">Media</a></li>
-              </ul>
-            </li>
-          </ul>
+                <ul class="submenu-list">
+                  <li class="submenu-item"><a href="#">Merchandise</a></li>
+                  <li class="submenu-item"><a href="#">Extras</a></li>
+                  <li class="submenu-item"><a href="#">Media</a></li>
+                </ul>
+              </li>
+            </ul>
 
-          <button class="search-btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+
+          <div class="nav-mobile">
+            <div class="nav-mobile-inner">
+              <h1><a href="#pheader">Home</a></h1>
+
+              <button class="menu-btn" data-toggle="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+
+            <ul class="menu-list" data-control="menu-btn">
+              <li class="menu-item"><a href="#band">Band</a></li>
+              <li class="menu-item"><a href="#tour">Tour</a></li>
+              <li class="menu-item"><a href="#contact">Contact</a></li>
+              <li class="menu-item" data-toggle="more">
+                <a>
+                  <span>More</span>
+                  <i class="fa-solid fa-caret-down"></i>
+                </a>
+
+                <ul class="submenu-list" data-control="more">
+                  <li class="submenu-item"><a href="#">Merchandise</a></li>
+                  <li class="submenu-item"><a href="#">Extras</a></li>
+                  <li class="submenu-item"><a href="#">Media</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
         <!-- End: Header -->
 
@@ -241,7 +271,13 @@
                       <p class="tour-description">
                         Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                       </p>
-                      <button class="cta">Buy tickets</button>
+                      <button
+                        class="cta"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal"
+                      >
+                        Buy tickets
+                      </button>
                     </div>
                   </div>
                 </li>
@@ -258,7 +294,13 @@
                       <p class="tour-description">
                         Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                       </p>
-                      <button class="cta">Buy tickets</button>
+                      <button
+                        class="cta"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal"
+                      >
+                        Buy tickets
+                      </button>
                     </div>
                   </div>
                 </li>
@@ -278,7 +320,13 @@
                       <p class="tour-description">
                         Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                       </p>
-                      <button class="cta">Buy tickets</button>
+                      <button
+                        class="cta"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal"
+                      >
+                        Buy tickets
+                      </button>
                     </div>
                   </div>
                 </li>
@@ -376,6 +424,42 @@
           </div>
         </div>
         <!-- End: Footer -->
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="modal"
+        tabindex="-1"
+        aria-labelledby="modalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">Modal title</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
